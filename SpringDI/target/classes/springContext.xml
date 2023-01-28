@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+    <context:component-scan base-package="springboot"/>
+    <bean class="springboot.model.User" id="userbean">
+    	<property name="name" value="gowtham"></property>
+    	<property name="email" value="gowtham@gmail.com"></property>
+    	<property name="address" value="Kurnool"></property>
+    </bean>
+    
+    <bean class="springboot.model.Employee" id="useremp">
+    	<constructor-arg value="sudarshan"/>
+    	<constructor-arg value="manager"/>
+    	<constructor-arg value="chandrapur"/>
+    </bean>
+    
+    <bean class="springboot.model.Employee" id="useremp1">
+    	<constructor-arg value="shubham"/>
+    	<constructor-arg value="manager"/>
+    	<constructor-arg value="patna"/>
+    </bean>
+    </beans>
+    
